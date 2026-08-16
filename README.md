@@ -12,17 +12,16 @@ This project provides an automated Python pipeline for visualizing wearable sens
 - **Automated Dashboard Generation:** Uses loops to automatically generate, format, and save 2-panel subplots (Accelerometer vs. Gyroscope) for every participant and exercise combination.
 - **High-Quality Export:** Plots are styled using the `seaborn-v0_8-deep` theme and exported as high-resolution (100 DPI) PNG files.
 
-## Project Structure
+## Project Organization
 
-Because the script uses relative file paths, ensure your project directory looks like this before running the code:
-
+```
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
-├── README.md          <- README for using this project.
+├── README.md          <- The top-level README for developers using this project.
 ├── data
 │   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
+│   ├── processed       <- The final, canonical data sets for modeling.
 │   └── raw            <- The original, immutable data dump.
 │
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
@@ -41,22 +40,22 @@ Because the script uses relative file paths, ensure your project directory looks
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-├── setup.py           <- Make this project pip installable with `pip install -e`
+├── setup.py           <- Make this project pip installable with `pip install -e .`
 ├── src                <- Source code for use in this project.
 │   ├── __init__.py    <- Makes src a Python module
 │   │
 │   ├── data           <- Scripts to download or generate data
 │   │   └── make_dataset.py
 │   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
+│   ├── features        <- Scripts to turn raw data into features for modeling
 │   │   └── build_features.py
 │   │
-│   ├── models         <- Scripts to train models and then use trained models to make
+│   ├── models          <- Scripts to train models and then use trained models to make
 │   │   │                 predictions
 │   │   ├── predict_model.py
 │   │   └── train_model.py
 │   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+│   └── visualization   <- Scripts to create exploratory and results oriented visualizations
 │       └── visualize.py
 │
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
